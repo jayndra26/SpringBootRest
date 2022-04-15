@@ -48,7 +48,7 @@ public class ApplicantController {
 			}
 
 		}
-		if(applicantFound==true)
+		if(applicantFound)
 			return applicant;
 		else 
 			throw new RuntimeException("Applicant not found");
@@ -118,7 +118,7 @@ public class ApplicantController {
 			return "Record for "+applicantObjectToAdd.getApplicantId()+" is already exist!!!";
 		else {
 			applicantService.updateApplicantService(applicantObjectToAdd);
-			return "Applicant added succesfully";
+			return "Applicant added successfully";
 		}
 	}
 	
